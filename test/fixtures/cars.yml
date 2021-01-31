@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  modelYear: 1
+  scale: MyString
+  colorRgba: MyString
+  automaker: one
+  collection: one
+  brand: one
+
+two:
+  name: MyString
+  modelYear: 1
+  scale: MyString
+  colorRgba: MyString
+  automaker: two
+  collection: two
+  brand: two
