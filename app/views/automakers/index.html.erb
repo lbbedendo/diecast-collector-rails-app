@@ -3,9 +3,9 @@
 <ul>
     <% @automakers.each do |automaker| %>
         <li>
-            <a href="/automakers/<%= automaker.id %>">
-                <%= automaker.name %> - <%= automaker.country%>
-            </a>
+            <%= link_to automaker.name, automaker %>
         </li>
     <% end %>
 </ul>
+
+<%= link_to "New Automaker", new_automaker_path %>

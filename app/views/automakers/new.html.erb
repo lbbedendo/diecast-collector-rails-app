@@ -1,0 +1,23 @@
+<h1>New Automaker</h1>
+
+<%= form_with model: @automaker do |form| %>
+    <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        <%= @automaker.errors.full_messages_for(:name).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :country %><br>
+        <%= form.text_field :country %>
+        <%= @automaker.errors.full_messages_for(:country).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
