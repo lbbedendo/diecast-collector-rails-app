@@ -1,0 +1,11 @@
+<h1>Automakers</h1>
+
+<ul>
+    <% @automakers.each do |automaker| %>
+        <li>
+            <a href="/automakers/<%= automaker.id %>">
+                <%= automaker.name %> - <%= automaker.country%>
+            </a>
+        </li>
+    <% end %>
+</ul>
