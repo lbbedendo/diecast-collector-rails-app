@@ -6,3 +6,29 @@
     <li><%= link_to "Edit", edit_automaker_path(@automaker) %></li>
     <li><%= link_to "Destroy", automaker_path(@automaker), method: :delete, data: { confirm: "Are you sure?"} %></li>
 </ul>
+
+<h2>Cars (<%= @automaker.cars.length %>)</h2>
+<% @automaker.cars.each do |car| %>
+    <p>
+        <strong>#<%= car.id %></strong>        
+        <strong>Name:</strong>
+        <%= car.name %>
+        <strong>Year:</strong>
+        <%= car.modelYear %>
+    </p>
+<% end %>
+
+<h2>Add a car to your collection:</h2>
+<%= form_with model: [ @automaker, @automaker.cars.build ] do |form| %>
+    <p>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+    </p>
+    <p>
+        <%= form.label :modelYear %><br>
+        <%= form.text_field :modelYear %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
