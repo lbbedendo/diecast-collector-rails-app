@@ -1,3 +1,8 @@
 <h1><%= @automaker.name %></h1>
 
 <p><%= @automaker.country%></p>
+
+<ul>
+    <li><%= link_to "Edit", edit_automaker_path(@automaker) %></li>
+    <li><%= link_to "Destroy", automaker_path(@automaker), method: :delete, data: { confirm: "Are you sure?"} %></li>
+</ul>
