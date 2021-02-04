@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_03_233405) do
+ActiveRecord::Schema.define(version: 2021_02_04_001916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,14 +30,15 @@ ActiveRecord::Schema.define(version: 2021_02_03_233405) do
 
   create_table "cars", force: :cascade do |t|
     t.string "name"
-    t.integer "modelYear"
+    t.integer "model_year"
     t.string "scale"
-    t.string "colorRgba"
+    t.string "color"
     t.bigint "automaker_id"
     t.bigint "collection_id"
     t.bigint "brand_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "product_code"
     t.index ["automaker_id"], name: "index_cars_on_automaker_id"
     t.index ["brand_id"], name: "index_cars_on_brand_id"
     t.index ["collection_id"], name: "index_cars_on_collection_id"
