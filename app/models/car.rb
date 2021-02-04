@@ -1,7 +1,7 @@
 class Car < ApplicationRecord
   belongs_to :automaker
-  belongs_to :collection
-  belongs_to :brand
+  has_one :brand
+  has_one :collection
 
   validates :name, presence: true
 end
