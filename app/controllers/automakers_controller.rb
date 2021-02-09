@@ -1,5 +1,8 @@
 class AutomakersController < ApplicationController
     def index
+        @brandsCount = Brand.count
+        @collectionsCount = Collection.count
+        @carsCount = Car.count
         @automakers = Automaker.all
     end
 

@@ -1,5 +1,10 @@
-<h1>Automakers</h1>
+<h1>Summary</h1>
+<p><%= @automakers.size %> automakers</p>
+<p><%= @carsCount %> cars</p>
+<p><%= @collectionsCount %> collections</p>
+<p><%= @brandsCount %> diecast brands</p>
 
+<h1>Automakers</h1>
 <ul>
     <% @automakers.each do |automaker| %>
         <li>
