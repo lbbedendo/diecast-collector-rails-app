@@ -19,24 +19,4 @@
 <% end %>
 
 <h2>Add a car to your collection:</h2>
-<%= form_with model: [ @automaker, @automaker.cars.build ] do |form| %>
-    <p>
-        <%= form.label :name %><br>
-        <%= form.text_field :name %>
-    </p>
-    <p>
-        <%= form.label :model_year %><br>
-        <%= form.text_field :model_year %>
-    </p>
-    <p>
-        <%= form.label :color %><br>
-        <%= form.text_field :color %>
-    </p>
-    <p>
-        <%= form.label :product_code %><br>
-        <%= form.text_field :product_code %>
-    </p>
-    <p>
-        <%= form.submit %>
-    </p>
-<% end %>
+<%= render 'cars/form' %>
