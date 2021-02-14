@@ -5,7 +5,7 @@
 <ul>
     <% @cars.each do |car| %>
         <li>
-            <%= link_to car.name, car %>
+            <%= link_to "#{car.automaker.name} #{car.name}", car %>
         </li>
     <% end %>
 </ul>

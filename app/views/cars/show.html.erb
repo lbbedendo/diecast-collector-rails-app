@@ -1,0 +1,10 @@
+<%= link_to "Home", root_path %>
+
+<h1><%= "#{@car.automaker.name} #{@car.name}" %></h1>
+
+<p><%= "Model Year: #{@car.model_year}"%></p>
+<p><%= "Scale: #{@car.scale || '-'}"%></p>
+<p><%= "Color: #{@car.color || '-'}"%></p>
+<p><%= "Product Code: #{@car.product_code || '-'}"%></p>
+<p><%= "Brand: #{@car.brand.present? ? @car.brand.name : '-'}"%></p>
+<p><%= "Collection: #{@car.collection.present? ? @car.collection.name : '-'}"%></p>
