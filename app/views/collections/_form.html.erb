@@ -1,0 +1,15 @@
+<%= form_with model: collection do |form| %>
+    <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :year %><br>
+        <%= form.text_field :year %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
