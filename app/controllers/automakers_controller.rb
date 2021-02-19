@@ -3,7 +3,7 @@ class AutomakersController < ApplicationController
         @brandsCount = Brand.count
         @collectionsCount = Collection.count
         @carsCount = Car.count
-        @automakers = Automaker.all
+        @automakers = Automaker.all.order("name")
     end
 
     def show

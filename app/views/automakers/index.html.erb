@@ -1,6 +1,15 @@
-<h1>Summary</h1>
-<p><%= @automakers.size %> automakers</p>
+<h1>Automakers</h1>
+<ul>
+    <% @automakers.each do |automaker| %>
+        <li>
+            <%= link_to automaker.name, automaker %>
+        </li>
+    <% end %>
+</ul>
 
+<%= link_to "New Automaker", new_automaker_path %>
+
+<h1>Summary</h1>
 <%= link_to cars_path do %>
     <p><%= @carsCount %> cars</p>
 <% end %>
@@ -12,14 +21,3 @@
 <%= link_to brands_path do %>
     <p><%= @brandsCount %> diecast brands</p>
 <% end %>
-
-<h1>Automakers</h1>
-<ul>
-    <% @automakers.each do |automaker| %>
-        <li>
-            <%= link_to automaker.name, automaker %>
-        </li>
-    <% end %>
-</ul>
-
-<%= link_to "New Automaker", new_automaker_path %>
