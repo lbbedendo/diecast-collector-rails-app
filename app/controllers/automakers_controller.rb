@@ -8,6 +8,8 @@ class AutomakersController < ApplicationController
 
     def show
         @automaker = Automaker.find(params[:id])
+        @collections = Collection.all.order("name")
+        @brands = Brand.all.order("name")
     end
 
     def new

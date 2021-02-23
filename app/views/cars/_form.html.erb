@@ -16,6 +16,14 @@
         <%= form.text_field :product_code %>
     </p>
     <p>
+        <%= form.label :collection %><br>
+        <%= form.select :collection_id, @collections.collect { |collection| [collection.name, collection.id] }, include_blank: true %>
+    </p>
+    <p>
+        <%= form.label :brand %><br>
+        <%= form.select :brand_id, @brands.collect { |brand| [brand.name, brand.id] }, include_blank: true %>
+    </p>
+    <p>
         <%= form.submit %>
     </p>
 <% end %>
