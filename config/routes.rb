@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "automakers#index"
+  root "index#index"
 
   resources :automakers do
     resources :cars
